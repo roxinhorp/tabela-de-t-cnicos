@@ -1,0 +1,107 @@
+
+ <!DOCTYPE html>
+ <html lang="en">
+ 
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+     <title>Convert | Export html Table to CSV & EXCEL File</title>
+     <link rel="stylesheet" type="text/css" href="style.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+ </head>
+ 
+ <body>
+     <main class="table" id="customers_table">
+         <section class="table__header">
+             <h1>Lista de técnicos</h1>
+             <div class="input-group">
+                 <input type="search" placeholder="pesquisar...">
+                 
+                 <img src="images/search.png" alt="">
+             </div>
+             <!-- Dentro do arquivo index.html, adicione o seguinte código onde achar melhor -->
+             <div><button id="addCadastroBtn"><i class="fas fa-user-plus"></i> Adicionar Técnico</button> 
+
+                <form id="cadastroForm" class="hidden">
+                    <input type="number" id="idInput" placeholder="ID" required>
+                    <input type="text" id="nomeInput" placeholder="Nome" required>
+                    <input type="text" id="usuarioInput" placeholder="Usuário" required>
+                    <button type="submit" id="salvarCadastro"><i class="fas fa-check"></i> Salvar</button>
+                    <button type="submit" id="cancelarCadastro"><i class="fas fa-times"></i> Cancelar</button> <!-- Botão Cancelar adicionado aqui -->
+                </form>
+
+             </div>
+
+
+
+             <div class="export__file">
+                 <label for="export-file" class="export__file-btn" title="Export File"></label>
+                 <input type="checkbox" id="export-file">
+                 <div class="export__file-options">
+                     <label>Export As &nbsp; &#10140;</label>
+                     <label for="export-file" id="toPDF">PDF <img src="images/pdf.png" alt=""></label>
+                     <label for="export-file" id="toJSON">JSON <img src="images/json.png" alt=""></label>
+                     <label for="export-file" id="toCSV">CSV <img src="images/csv.png" alt=""></label>
+                     <label for="export-file" id="toEXCEL">EXCEL <img src="images/excel.png" alt=""></label>
+                     
+              
+                 </div>
+             </div>
+         </section>
+         <section class="table__body">
+             <table>
+                
+               
+                 <thead>
+                     <tr>
+                         <th> Id <span class="icon-arrow">&UpArrow;</span></th>
+                         <th> Nome <span class="icon-arrow">&UpArrow;</span></th>
+                         <th> usuario <span class="icon-arrow">&UpArrow;</span></th>
+                         <th> ultimo atendimento <span class="icon-arrow">&UpArrow;</span></th>
+                         <th> Status <span class="icon-arrow">&UpArrow;</span></th>
+                         <th> Atendidos <span class="icon-arrow">&UpArrow;</span></th>
+                     </tr>
+                 </thead>
+                 <tbody>
+                     <tr>
+                         <td> 1 </td>
+                         <td> <img src="images/ususario.png" alt="">David</td>
+                         <td> medina </td>
+                         <td> 21/06 16:45 </td>
+                         <td>
+                             <p class="status intervalo">intervalo</p>
+                         </td>
+                         <td> <strong> 999 </strong></td>
+                     </tr>
+                     <tr>
+                        <td> 2 </td>
+                        <td> <img src="images/Alex Gonley.jpg" alt="">jose</td>
+                        <td> jose2024 </td>
+                        <td> 21/06 13:45 </td>
+                        <td>
+                            <p class="status disponivel">Disponivel</p>
+                        </td>
+                        <td> <strong> 7 </strong></td>
+                    </tr>
+                    <tr>
+                        <td> 3 </td>
+                        <td> <img src="images/cacaco.ico" alt="">lucas</td>
+                        <td> souza </td>
+                        <td> 21/06 19:45 </td>
+                        <td>
+                            <p class="status pausa">pausa
+
+                            </p>
+                        </td>
+                        <td> <strong> 5 </strong></td>
+                    </tr>
+                 </tbody>
+             </table>
+         </section>
+     </main>
+     <script src="script.js"></script>
+ 
+ </body>
+ 
+ </html>
